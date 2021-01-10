@@ -3,7 +3,18 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.send(
-    "Hola! Your nodejs application is live. POST/DELETE/PATCH/PUT endpoints are on root end point."
+    `
+Hola! Your nodejs application is live. POST/DELETE/PATCH/PUT endpoints are on root end point.
+${JSON.stringify({
+  "name": "Nodejs",
+  "version": "v12.11.0",
+  "description": "nodejs API",
+  "main": "index.js",
+  "author": "Hunzaw",
+  "license": "MIT"
+})}
+
+`
   );
 });
 
